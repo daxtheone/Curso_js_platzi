@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+    /*
+    var estudiantes = ["daniel", "valeria", "jesus", "paola"];
+    function saludarEstudiantes(nombre){
+        console.log(` Hola, ${nombre} `);
+    }
+
+    // Con FOR
+    for( let i=0 ; i<estudiantes.length ; i++ ){
+        saludarEstudiantes(estudiantes[i]);
+    }
+
+    // Con WHILE 
+    let nombre_estudiante;
+    while( estudiantes.length > 0 ){
+        estudiante=estudiantes.shift();
+        saludarEstudiantes(estudiante);
+    }
+
+// Objetos
+
+var miAuto = {
+    marca : "Toyota",
+    modelo : "Corolla",
+    ano : 2020,
+    detalleDelAuto: function(){
+        console.log(`Auto ${this.modelo} ${this.ano}`);
+    }
+}
+console.log(miAuto.marca);
+miAuto.detalleDelAuto();
+
+
+
+// funcion constructora
+
+function auto(marca, modelo, ano) {
+    this.marca = marca; 
+    this.modelo =  modelo;
+    this.ano = ano;
+    this.detalleDelAuto = function(){
+        console.log(`Auto ${this.modelo} ${this.ano}`);
+    }
+}
+
+var autoNuevo1 = new auto("Tesla","Model 3",2020);
+var autoNuevo2 = new auto("Tesla","Model 2",2020);
+var autoNuevo3 = new auto("Tesla","Model x",2020);
+
+
+//Ejemplo 
+let autos = [], marca, modelo, ano;
+
+for (let i=0 ; i<2 ; i++) {
+    marca = prompt("Ingresa la marca");
+    modelo = prompt("Ingresa el Modelo");
+    ano = prompt("Ingresa el año");
+    autos.push( new auto(marca,modelo,ano) );
+}
+
+for ( let i = 0; i < autos.length; i++ ) {
+    let datos=autos[i];
+    datos.detalleDelAuto();
+}
+
+
+*/
+
+let articulos = [
+    { nombre: "Bici", costo: 3000 },
+    { nombre: "Tv", costo : 2500 },
+    { nombre: "Libro", costo: 320 },
+    { nombre: "Celular", costo: 10000 },
+    { nombre: "Laptop", costo: 20000 },
+    { nombre: "Teclado", costo: 500 },
+    { nombre: "Audifonos", costp: 1700 },
+];
+
+
+// filter
+let artiulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500
+});
+console.log(artiulosFiltrados);
+
+
+// map
+let nombreArticulos = articulos.map(function(articulo){
+    return articulo.nombre;
+});
+
+console.log(nombreArticulos);
+
+//find
+
+let encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "Laptop";
+});
+
+console.log(encuentraArticulo);
+
+//for each
+
+
+articulos.forEach(function (articulo){
+    console.log(articulo.nombre);
+});
+
+
+// some devuelto solo true o false
+
+let articulosBaratos =  articulos.some( function(articulo){ 
+    return articulo.costo <= 700;
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
